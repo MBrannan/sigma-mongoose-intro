@@ -20,6 +20,14 @@
                 <input type="text" ng-model="peeps.newPerson.location" id="location" placeholder="Location" />
                 <label for="birthDate">Date of Birth: </label>
                 <input type="date" ng-model="peeps.newPerson.birthDate" id="birthDate" placeholder="birthDate">
+                <label for="nicenessLevel">Niceness Level: </label>
+                <select name="nicenessLevel" ng-model="peeps.newPerson.nicenessLevel">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
                 <button class="btn btn-primary" ng-click="peeps.addPerson(peeps.newPerson)">Add Person</button>
             </form>
             </div>
@@ -31,6 +39,7 @@
                 <p>{{person.name}}</p>
                 <p>{{person.location}}</p>
                 <p>{{person.birthDate}}</p>
+                <p>{{person.nicenessLevel}}</p>
                 <button ng-click="peeps.updatePerson(person._id)" class="btn btn-default">Update</button>
                 <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger">Delete</button>
             </div>
